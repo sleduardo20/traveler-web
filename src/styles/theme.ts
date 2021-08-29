@@ -31,7 +31,8 @@ export default {
 
     ligth: 300,
     normal: 400,
-    bold: 600,
+    medium: 600,
+    bold: 700,
     sizes: {
       xsmall: '1.2rem',
       small: '1.4rem',
