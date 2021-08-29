@@ -7,9 +7,12 @@ const modifier = {
   blueLow: (theme: DefaultTheme) => css`
     background: ${theme.colors.blueLow};
     color: ${theme.colors.blue};
+    font-weight: ${theme.font.medium};
   `,
   orange: (theme: DefaultTheme) => css`
     background: ${theme.colors.orange};
+    color: ${theme.colors.shape1};
+    font-weight: ${theme.font.normal};
   `,
   large: () => css`
     width: 32.9rem;
@@ -28,7 +31,7 @@ export const Container = styled.button<Props>`
     cursor: pointer;
     font-family: ${theme.font.family.roboto};
     line-height: 2.4rem;
-    font-weight: ${theme.font.medium};
+
     transition: filter 0.2s;
 
     &:hover {
