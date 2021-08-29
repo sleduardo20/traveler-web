@@ -14,7 +14,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
 
         <link
-          href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Roboto:wght@300;400;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>
