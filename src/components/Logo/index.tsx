@@ -1,6 +1,7 @@
 export const Logo = () => {
   return (
     <svg
+      aria-label="Logo Traveler"
       width="156"
       height="32"
       viewBox="0 0 156 32"
