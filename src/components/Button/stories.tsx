@@ -7,9 +7,18 @@ export default {
   component: Button,
 } as Meta;
 
-export const Default: Story<ButtonProps> = args => <Button {...args} />;
+export const Primary: Story<ButtonProps> = args => <Button {...args} />;
 
-Default.args = {
+Primary.args = {
   color: 'blueLow',
   title: 'Acesso Restrito',
+  size: 'small',
+};
+
+export const Secondary: Story<ButtonProps> = args => <Button {...args} />;
+
+Secondary.args = {
+  color: 'orange',
+  title: 'Acesso Restrito',
+  size: 'large',
 };
