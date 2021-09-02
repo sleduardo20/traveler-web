@@ -2,20 +2,23 @@ import { ButtonHTMLAttributes } from 'react';
 import * as S from './styles';
 
 export type ButtonProps = {
-  title: string;
-  size?: 'large' | 'small';
-  color?: 'orange' | 'blueLow';
+  title?: string;
+  icon?: React.ReactNode;
+  size?: 'large' | 'medium' | 'small';
+  color?: 'orange' | 'blueLow' | 'green';
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button = ({
-  size = 'small',
+  size = 'medium',
+  icon,
   color = 'blueLow',
   title,
   ...rest
 }: ButtonProps) => {
   return (
     <S.Container {...rest} size={size} color={color}>
-      <span>{title}</span>
+      {!!icon && icon}
+      {!!title && <span>{title}</span>}
     </S.Container>
   );
 };
