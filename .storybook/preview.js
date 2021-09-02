@@ -27,7 +27,7 @@ export const parameters = {
     values: [
       {
         name: 'blog',
-        value: '#F6F6F6',
+        value: '#FFFFFF',
       },
 
     ],
