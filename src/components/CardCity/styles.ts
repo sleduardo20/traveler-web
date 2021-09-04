@@ -1,7 +1,7 @@
 import styled, { css, DefaultTheme } from 'styled-components';
-import { CardProps } from '.';
+import { CardCityProps } from '.';
 
-type Props = Pick<CardProps, 'size'>;
+type Props = Pick<CardCityProps, 'size'>;
 
 const modifierContainer = {
   normal: () => css`
