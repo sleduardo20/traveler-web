@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { CardCity, CardCityProps } from '.';
 
 export default {
-  title: 'components/Card',
+  title: 'components/CardCity',
   component: CardCity,
 } as Meta;
 
