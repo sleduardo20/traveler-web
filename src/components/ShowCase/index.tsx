@@ -13,12 +13,12 @@ export const ShowCase = ({
   title,
   description,
   src,
-  detach,
+  detach = true,
 }: ShowCaseProps) => {
   return (
     <S.Container>
       <S.Info>
-        {detach && (
+        {!!detach && (
           <span>
             {IconAlert}
             Destaque
@@ -27,8 +27,9 @@ export const ShowCase = ({
         <h2>{title}</h2>
         <p>{description}</p>
       </S.Info>
-      <Image src={src} alt={title} layout="fill" objectFit="cover" />
-      <S.Image />
+      <S.Image>
+        <Image src={src} alt={title} layout="fill" objectFit="cover" />
+      </S.Image>
     </S.Container>
   );
 };
