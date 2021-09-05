@@ -41,6 +41,7 @@ export const Search = styled.div<SearchProps>`
   ${({ theme, isFilled }) => css`
     svg {
       color: ${isFilled ? theme.colors.orange : theme.colors.shape02};
+      transition: 0.3s;
     }
   `}
 `;
@@ -49,6 +50,7 @@ export const Close = styled.div<SearchProps>`
     z-index: 5;
     cursor: pointer;
     display: ${isFilled ? 'block' : 'none'};
+
     svg {
       color: ${theme.colors.shape02};
     }
