@@ -2,7 +2,7 @@ import { render, screen } from 'utils/test-utils';
 
 import { CardCity } from '.';
 
-import { mockCardCity } from './mock';
+import { mockCardCity } from './mockCardCity';
 
 describe('<Card />', () => {
   it('should be able render Card component', () => {
