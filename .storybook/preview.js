@@ -1,14 +1,17 @@
 import '../.jest/next-image.mock';
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
+import {ModalProvider} from '../src/hooks/useModal'
 
 import theme from '../src/styles/theme';
 import GlobalStyles from '../src/styles/GlobalStyles';
 
 addDecorator((story)=>(
   <ThemeProvider theme={theme}>
+    <ModalProvider>
   {story()}
   <GlobalStyles/>
+  </ModalProvider>
   </ThemeProvider>
   
 ));

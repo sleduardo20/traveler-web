@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useModal } from '../../hooks/useModal';
 import * as S from './styles';
 import { IconClose } from '../../constants/Icons';
 
@@ -8,12 +9,12 @@ export type ModalProps = {
   children: React.ReactNode;
 };
 
-export const Modal = ({ children, header, open }: ModalProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const Modal = ({ children, header }: ModalProps) => {
+  const { isOpen, closeModal } = useModal();
 
   useEffect(() => {
     const handleKeyup = ({ key }: KeyboardEvent) => {
-      key === 'Escape' && setIsOpen(false);
+      key === 'Escape' && closeModal();
     };
 
     window.addEventListener('keyup', handleKeyup);
@@ -21,28 +22,20 @@ export const Modal = ({ children, header, open }: ModalProps) => {
     return () => {
       window.removeEventListener('keyup', handleKeyup);
     };
-  }, []);
+  }, [closeModal]);
 
-  const handleModal = () => {
-    setIsOpen(state => !state);
-  };
   return (
-    <>
-      <button type="button" onClick={handleModal}>
-        Open Modal
-      </button>
-      <S.Modal open={isOpen}>
-        <S.Overlay onClick={() => setIsOpen(false)} />
-        <S.ContentModal>
-          <S.Header>
-            <div>{header}</div>
-            <button type="button" onClick={handleModal}>
-              {IconClose}
-            </button>
-          </S.Header>
-          <S.MainModal>{children}</S.MainModal>
-        </S.ContentModal>
-      </S.Modal>
-    </>
+    <S.Modal open={isOpen}>
+      <S.Overlay onClick={closeModal} />
+      <S.ContentModal>
+        <S.Header>
+          <div>{header}</div>
+          <button type="button" onClick={closeModal}>
+            {IconClose}
+          </button>
+        </S.Header>
+        <S.MainModal>{children}</S.MainModal>
+      </S.ContentModal>
+    </S.Modal>
   );
 };

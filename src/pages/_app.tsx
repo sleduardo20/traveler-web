@@ -1,8 +1,6 @@
-/* eslint-disable @next/next/no-page-custom-font */
+import { ModalProvider } from 'hooks/useModal';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { Provider } from 'react-redux';
-import { store } from 'hooks/redux/store/store';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -11,8 +9,8 @@ import theme from 'styles/theme';
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <ModalProvider>
         <Head>
           <title>Traveler</title>
           <link rel="shortcut icon" href="/img/icon-512.png" />
@@ -25,8 +23,8 @@ function App({ Component, pageProps }: AppProps) {
         </Head>
         <Component {...pageProps} />
         <GlobalStyles />
-      </ThemeProvider>
-    </Provider>
+      </ModalProvider>
+    </ThemeProvider>
   );
 }
 

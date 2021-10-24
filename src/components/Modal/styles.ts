@@ -12,7 +12,7 @@ export const Modal = styled.div<Props>`
     height: 100vh;
     opacity: ${open ? 1 : 0};
     pointer-events: ${open ? 'all' : 'none'};
-    transition: opacity 0.5s;
+    transition: opacity 0.1s;
   `}
 `;
 
@@ -20,7 +20,7 @@ export const ContentModal = styled.div`
   ${({ theme }) => css`
     width: 73.6rem;
     height: 52.8rem;
-    border-radius: 2rem;
+    border-radius: 0.8rem;
     position: absolute;
     top: 50%;
     left: 50%;
