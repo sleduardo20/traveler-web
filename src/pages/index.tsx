@@ -1,5 +1,9 @@
+import { useSelector } from 'react-redux';
+
 const Home = () => {
-  return <h1>Homepage</h1>;
+  const modalState = useSelector(state => state);
+  console.log(modalState);
+  return <h1>Eduardo</h1>;
 };
 
 export default Home;

@@ -32,7 +32,7 @@ export const Modal = ({ children, header, open }: ModalProps) => {
         Open Modal
       </button>
       <S.Modal open={isOpen}>
-        <S.Overlay />
+        <S.Overlay onClick={() => setIsOpen(false)} />
         <S.ContentModal>
           <S.Header>
             <div>{header}</div>
