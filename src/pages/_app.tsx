@@ -13,8 +13,8 @@ function App({ Component, pageProps }: AppProps) {
       <ModalProvider>
         <Head>
           <title>Traveler</title>
-          <link rel="shortcut icon" href="/img/icon-512.png" />
-          <link rel="apple-touch-icon" href="/img/icon-512.png" />
+          <link rel="shortcut icon" href="/img/icon-192.png" />
+          <link rel="apple-touch-icon" href="/img/icon-192.png" />
           <link rel="manifest" href="/manifest.json" />
           <link
             href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Roboto:wght@300;400;600;700&display=swap"

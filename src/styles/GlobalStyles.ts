@@ -16,6 +16,7 @@ export default createGlobalStyle`
   }
 
   body{
-    font-family: ${({ theme }) => theme.font.family.barlow}
+    font-family: ${({ theme }) => theme.font.family.barlow};
+    background-color: ${({ theme }) => theme.colors.background};
   }
 `;

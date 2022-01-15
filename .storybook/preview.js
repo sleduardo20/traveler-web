@@ -7,12 +7,12 @@ import theme from '../src/styles/theme';
 import GlobalStyles from '../src/styles/GlobalStyles';
 
 addDecorator((story)=>(
-  <ThemeProvider theme={theme}>
-    <ModalProvider>
-  {story()}
-  <GlobalStyles/>
+  <ModalProvider>
+    <ThemeProvider theme={theme}>
+      {story()}
+      <GlobalStyles/>
+    </ThemeProvider>
   </ModalProvider>
-  </ThemeProvider>
   
 ));
 
