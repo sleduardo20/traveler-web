@@ -36,6 +36,24 @@ export const TopLeft = styled.section`
 export const Places = styled.section`
   width: 64rem;
   padding-top: 8rem;
-  max-height: 90rem;
+  height: 97vh;
   overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+const stylesColumns = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+`;
+
+export const PlacesColumnLeft = styled.section`
+  ${stylesColumns}
+`;
+
+export const PlacesColumnRigth = styled.section`
+  margin-top: 4.8rem;
+  ${stylesColumns}
 `;
