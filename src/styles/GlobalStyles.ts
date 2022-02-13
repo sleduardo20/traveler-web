@@ -14,6 +14,10 @@ export default createGlobalStyle`
   html,body, #__next {
     height: 100%;
   }
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
 
   body{
     font-family: ${({ theme }) => theme.font.family.barlow};

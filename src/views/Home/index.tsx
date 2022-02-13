@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Button } from 'components/Button';
 import { CardCity } from 'components/CardCity';
 import { mockCardCity } from 'components/CardCity/mockCardCity';
@@ -10,7 +11,7 @@ import * as S from './styles';
 export const ViewHome = () => {
   return (
     <>
-      <Header hasBorder />
+      <Header />
       <Wrapper>
         <S.Container>
           <S.TopLeft>
@@ -21,11 +22,15 @@ export const ViewHome = () => {
               de Santa Catarina
             </p>
 
-            <Button
-              size="large"
-              color="orange"
-              title="Descubra todos os Lugares"
-            />
+            <Link href="/list-of-cities">
+              <a>
+                <Button
+                  size="large"
+                  color="orange"
+                  title="Descubra todos os Lugares"
+                />
+              </a>
+            </Link>
           </S.TopLeft>
           <S.Places>
             <S.PlacesColumnLeft>

@@ -35,8 +35,7 @@ export const TopLeft = styled.section`
 
 export const Places = styled.section`
   width: 64rem;
-  padding-top: 8rem;
-  height: 97vh;
+  height: calc(95vh - 9.6rem);
   overflow-y: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
