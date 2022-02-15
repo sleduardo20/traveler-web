@@ -11,7 +11,7 @@ import * as S from './styles';
 export const ViewHome = () => {
   return (
     <>
-      <Header />
+      <Header hasBorder={false} />
       <Wrapper>
         <S.Container>
           <S.TopLeft>

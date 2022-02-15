@@ -8,13 +8,13 @@ type HeaderProps = {
   hasBorder?: boolean;
 };
 
-export const Header = ({ hasBorder = false, children }: HeaderProps) => {
+export const Header = ({ hasBorder = true, children }: HeaderProps) => {
   return (
     <S.Container hasBorder={hasBorder}>
       <Wrapper>
         <S.Header>
           <Logo />
-          {!!children && { children }}
+          {children}
           <Button color="blueLow" size="medium" title="Acesso Restrito" />
         </S.Header>
       </Wrapper>
