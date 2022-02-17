@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { Button } from 'components/Button';
 import { CardCity } from 'components/CardCity';
-import { mockCardCity } from 'components/CardCity/mockCardCity';
+
 import { Header } from 'components/Header';
-import { Logo } from 'components/Logo';
 import { Wrapper } from 'components/Wrapper';
 
+import { mockCardCity } from 'mocks/CardCity';
 import * as S from './styles';
 
 export const ViewHome = () => {

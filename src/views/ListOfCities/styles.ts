@@ -29,28 +29,20 @@ export const WrapperOption = styled.div`
     gap: ${theme.spacings.medium};
     color: ${theme.colors.complement};
     font-size: ${theme.font.sizes.medium};
-    padding-bottom: ${theme.spacings.xsmall};
     border-bottom: 1px solid ${theme.colors.shape02};
 
     span {
       cursor: pointer;
+      padding-bottom: ${theme.spacings.xsmall};
 
       &.active {
         position: relative;
         font-weight: ${theme.font.bold};
         color: ${theme.colors.title};
-
-        ::after {
-          content: '';
-          width: 90px; //verificar o tamanho exato para as outras opções
-          height: 2px;
-          left: 50%;
-          transform: translate(-50%);
-          background: ${theme.colors.orange};
-          position: absolute;
-          top: 33px;
-        }
+        border-bottom: 2px solid ${theme.colors.orange};
       }
     }
   `}
 `;
+
+export const PlacesSection = styled.section``;
