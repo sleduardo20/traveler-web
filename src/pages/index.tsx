@@ -1,5 +1,5 @@
 import { Cities } from 'model/cities';
-import { ViewHome } from 'views/Home';
+import ViewHome from 'views/Home';
 
 import { responseCardCities } from '../mocks/CardCity';
 
