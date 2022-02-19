@@ -1,7 +1,9 @@
+import { Cities } from 'model/cities';
 import { ViewHome } from 'views/Home';
+import { responseCardCities } from '../mocks/CardCity';
 
-const Home = () => {
-  return <ViewHome />;
+const Home = ({ cities }: Cities) => {
+  return <ViewHome {...responseCardCities} />;
 };
 
 export default Home;

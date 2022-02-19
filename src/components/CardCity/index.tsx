@@ -4,14 +4,14 @@ import * as S from './styles';
 export type CardCityProps = {
   size?: 'normal' | 'large';
   src: string;
-  city: string;
+  name: string;
   places: number;
 };
 
 export const CardCity = ({
   size = 'normal',
   src,
-  city,
+  name,
   places,
 }: CardCityProps) => {
   return (
@@ -20,7 +20,7 @@ export const CardCity = ({
         <Image src={src} layout="fill" objectFit="cover" />
       </S.Image>
       <S.Place size={size}>
-        <strong>{city}</strong>
+        <strong>{name}</strong>
         <span>
           {places}
           {places > 1 ? ' locais' : ' local'}

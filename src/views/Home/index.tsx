@@ -5,10 +5,10 @@ import { CardCity } from 'components/CardCity';
 import { Header } from 'components/Header';
 import { Wrapper } from 'components/Wrapper';
 
-import { mockCardCity } from 'mocks/CardCity';
+import { Cities } from 'model/cities';
 import * as S from './styles';
 
-export const ViewHome = () => {
+export const ViewHome = ({ cities }: Cities) => {
   return (
     <>
       <Header hasBorder={false} />
@@ -34,18 +34,11 @@ export const ViewHome = () => {
           </S.TopLeft>
           <S.Places>
             <S.PlacesColumnLeft>
-              <CardCity {...mockCardCity} />
-              <CardCity {...mockCardCity} />
-              <CardCity {...mockCardCity} />
-              <CardCity {...mockCardCity} />
-              <CardCity {...mockCardCity} />
+              {cities.length > 0 && cities.map(city => <CardCity {...city} />)}
             </S.PlacesColumnLeft>
 
             <S.PlacesColumnRigth>
-              <CardCity {...mockCardCity} />
-              <CardCity {...mockCardCity} />
-              <CardCity {...mockCardCity} />
-              <CardCity {...mockCardCity} />
+              {cities.length > 0 && cities.map(city => <CardCity {...city} />)}
             </S.PlacesColumnRigth>
           </S.Places>
         </S.Container>
