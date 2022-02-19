@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { FaWhatsapp, FaArrowLeft } from 'react-icons/fa';
-
-import { Button, ButtonProps } from '.';
+import Button from '.';
+import { ButtonProps } from './Button';
 
 export default {
   title: 'components/Buttons',

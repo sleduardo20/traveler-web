@@ -1,11 +1,17 @@
 import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from '../../utils/test-utils';
 
-import { InputSearch } from '.';
+import InputSearch from '.';
 
 describe('<Input/>', () => {
+  const props = {
+    name: 'inputsearch',
+    isFilled: false,
+    handleClear: jest.fn(),
+  };
+
   it('should be able render InputSearch component correctly', async () => {
-    const { debug } = render(<InputSearch name="input test" />);
+    render(<InputSearch {...props} />);
     const input = screen.getByRole('textbox');
 
     expect(screen.getByLabelText(/icon-search/i)).toHaveStyle({

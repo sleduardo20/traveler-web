@@ -1,8 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-
-import { ShowCase, ShowCaseProps } from '.';
-
-import { mockShowCase } from './mockShowCase';
+import { mockShowCase } from 'mocks/ShowCase';
+import ShowCase from '.';
+import { ShowCaseProps } from './ShowCase';
 
 export default {
   title: 'components/ShowCase',

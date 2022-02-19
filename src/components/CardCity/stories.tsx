@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-
-import { CardCity, CardCityProps } from '.';
+import CardCity from '.';
+import { CardCityProps } from './CardCity';
 
 export default {
   title: 'components/CardCity',
@@ -15,7 +15,7 @@ export const Normal: Story<CardCityProps> = args => (
 
 Normal.args = {
   size: 'normal',
-  city: 'Florianopolis',
+  name: 'Florianopolis',
   src: 'https://images.unsplash.com/photo-1545145879-71cf2f60c2a7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80',
   places: 56,
 };
@@ -28,7 +28,7 @@ export const Large: Story<CardCityProps> = args => (
 
 Large.args = {
   size: 'large',
-  city: 'Florianopolis',
+  name: 'Florianopolis',
   src: 'https://images.unsplash.com/photo-1545145879-71cf2f60c2a7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80',
   places: 56,
 };

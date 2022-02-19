@@ -1,6 +1,6 @@
 import { FaArrowLeft } from 'react-icons/fa';
 import { render, screen } from 'utils/test-utils';
-import { Button } from '.';
+import Button from '.';
 
 describe('<Button/>', () => {
   it('should be able render Button component with size small', () => {

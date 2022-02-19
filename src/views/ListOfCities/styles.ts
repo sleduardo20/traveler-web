@@ -45,4 +45,12 @@ export const WrapperOption = styled.div`
   `}
 `;
 
-export const PlacesSection = styled.section``;
+export const PlacesSection = styled.section`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.medium};
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: ${theme.spacings.medium};
+  `}
+`;

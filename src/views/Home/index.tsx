@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import { Button } from 'components/Button';
-import { CardCity } from 'components/CardCity';
 
-import { Header } from 'components/Header';
-import { Wrapper } from 'components/Wrapper';
-
+import Header from 'components/Header';
+import CardCity from 'components/CardCity';
+import Button from 'components/Button';
+import Wrapper from 'components/Wrapper';
 import { Cities } from 'model/cities';
 import * as S from './styles';
 

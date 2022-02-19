@@ -1,7 +1,7 @@
+import { mockCardPlace } from 'mocks/CardPlace';
 import { render, screen } from '../../utils/test-utils';
 
-import { CardPlace } from '.';
-import { mockCardPlace } from './mock';
+import CardPlace from '.';
 
 describe('<CardPlace/>', () => {
   it('should be able render CardPlace component', () => {

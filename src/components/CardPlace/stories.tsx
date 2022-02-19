@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-
-import { CardPlace, CardPlaceProps } from '.';
-import { mockCardPlace } from './mock';
+import { mockCardPlace } from 'mocks/CardPlace';
+import CardPlace from '.';
+import { CardPlaceProps } from './CardPlace';
 
 export default {
   title: 'components/CardPlace',

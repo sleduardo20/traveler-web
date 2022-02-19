@@ -1,6 +1,8 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { InputSearch, InputSearchProps } from '.';
+import { InputSearchProps } from './InputSearch';
+
+import InputSearch from '.';
 
 export default {
   title: 'components/InputSearch',

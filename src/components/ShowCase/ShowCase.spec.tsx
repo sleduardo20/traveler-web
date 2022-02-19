@@ -1,8 +1,7 @@
+import { mockShowCase } from 'mocks/ShowCase';
 import { render, screen } from '../../utils/test-utils';
 
-import { ShowCase } from '.';
-
-import { mockShowCase } from './mockShowCase';
+import ShowCase from '.';
 
 describe('<ShowCase/>', () => {
   it('should be able render ShowCase component correctly', () => {
