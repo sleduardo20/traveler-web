@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components';
-import { CardCityProps } from '.';
+import { CardCityProps } from './CardCity';
 
 type Props = Pick<CardCityProps, 'size'>;
 
@@ -19,8 +19,14 @@ export const Container = styled.div<Props>`
     background: ${theme.colors.shape1};
     border: 0.1rem solid ${theme.colors.shape02};
     border-radius: 2rem;
+    transition: 0.2s;
 
     ${!!size && modifierContainer[size]}
+
+    &:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
   `}
 `;
 
