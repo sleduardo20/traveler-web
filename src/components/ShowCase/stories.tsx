@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { mockShowCase } from 'mocks/ShowCase';
+import { mockShowCase } from '../../mocks/ShowCase';
 import ShowCase from '.';
 import { ShowCaseProps } from './ShowCase';
 
