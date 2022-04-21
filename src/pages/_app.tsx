@@ -1,6 +1,7 @@
 import { ModalProvider } from 'hooks/useModal';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import NextProgressBar from 'nextjs-progressbar';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -23,6 +24,12 @@ function App({ Component, pageProps }: AppProps) {
         </Head>
         <Component {...pageProps} />
         <GlobalStyles />
+        <NextProgressBar
+          color={`${theme.colors.orange}`}
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={3}
+        />
       </ModalProvider>
     </ThemeProvider>
   );
